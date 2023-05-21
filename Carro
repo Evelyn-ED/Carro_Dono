@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Carro{
+
+    String placa;
+    String cor;
+    Dono dono;
+    float valor;
+
+
+    void consultar(){
+        System.out.println("Dados do Carro: " +placa);
+        System.out.println("Cor do carro:" +cor);
+        System.out.println("Dono do carro:" +dono.nome);
+        System.out.println("Valor do carro:" +valor);
+    }
+
+    void reajustar(float aumento){
+        valor  = valor + aumento;
+        System.out.println("Preço do carro reajustado ");
+
+    }
+
+    void lerScanner(){
+
+        Scanner sc = new Scanner (System . in);
+        Scanner sc2 = new Scanner (System . in);
+
+        dono = new Dono();
+
+        System.out.println("Qual o nome do dono do carro?");
+        dono.nome = sc.nextLine();
+
+        System.out.println("Qual o cpf do dono do carro?");
+        dono.cpf = sc.nextLine();
+
+        System.out.println("Qual o número de telefone do dono do carro?");
+        dono.telefone = sc.next();
+
+        System.out.println("Qual é a cor do carro?");
+        cor = sc2.next();
+
+        System.out.println("Qual a placa do carro?");
+        placa = sc2.next();
+
+        System.out.println("Qual o valor do carro?");
+        valor = sc2.nextFloat();
+
+        System.out.println("Dados lidos com sucesso!!!!");
+    }
+}
