@@ -1,0 +1,25 @@
+public class Principal{
+
+    public static void main(String[] args) {
+        Carro c1 = new Carro ();
+        c1.lerScanner();
+
+        Carro c2 = new Carro ();
+        c2.cor = "Branca";
+        //c2.dono.nome = "Rita";
+        c2.placa = "GHJ1234";
+        c2.valor = 5000000;
+
+        Carro c3 = new Carro ();
+        c3.lerScanner();
+
+        c1.consultar();
+        //c2.consultar();
+        c3.consultar();
+
+        c1.reajustar(30000);
+        //c2.reajustar(600);
+        c3.reajustar(90000 );
+        
+    }
+}
